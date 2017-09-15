@@ -9,6 +9,14 @@ class SnakeWindow(arcade.Window):
 
         arcade.set_background_color(arcade.color.BLACK)
 
+        self.snake_sprite = arcade.Sprite('C:/Users/Admin/Desktop/Snake/block.png')
+        self.snake_sprite.set_position(300,300)
+
+    def on_draw(self):
+        arcade.start_render()
+
+        self.snake_sprite.draw()
+
 def main():
     window = SnakeWindow(SCREEN_WIDTH, SCREEN_HEIGHT)
     arcade.set_window(window)
